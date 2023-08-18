@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
         process.env.NODE_ENV === 'production'
           ? `${settings?.siteUrl}`
           : `http://localhost:3000/`,
-      siteName: settings.siteTitle || '',
+      siteName: settings.title || '',
       images: [],
       locale: 'en-AU',
       type: 'website',

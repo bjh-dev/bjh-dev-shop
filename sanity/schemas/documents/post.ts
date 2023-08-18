@@ -1,9 +1,11 @@
+import { LuPenTool } from 'react-icons/lu'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
+  icon: LuPenTool,
   groups: [
     {
       title: 'Content',

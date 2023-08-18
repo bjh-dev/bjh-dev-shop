@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line @typescript-eslint/no-var-requires, import/no-extraneous-dependencies
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   darkMode: ['class'],
@@ -9,14 +11,56 @@ module.exports = {
     './src/**/*.{ts,tsx}',
   ],
   theme: {
+    fontWeight: {
+      normal: 300,
+      medium: 600,
+      bold: 700,
+    },
     container: {
       center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
     },
     extend: {
+      padding: {
+        xs: '1rem', // p-4
+        sm: '1.5rem', // p-6
+        md: '3rem', // p-12
+        lg: '4rem', // p-16
+        xl: '6rem', // p-24
+      },
+      fontFamily: {
+        'ext-light': [
+          'var(--Amer-Extended-Light)',
+          ...defaultTheme.fontFamily.sans,
+        ],
+        'ext-reg': [
+          'var(--Amer-Extended-Reg)',
+          ...defaultTheme.fontFamily.sans,
+        ],
+        'ext-bold': [
+          'var(--Amer-Extended-Bold)',
+          ...defaultTheme.fontFamily.sans,
+        ],
+        'exp-light': [
+          'var(--Amer-Expanded-Light)',
+          ...defaultTheme.fontFamily.sans,
+        ],
+        'exp-reg': [
+          'var(--Amer-Expanded-Reg)',
+          ...defaultTheme.fontFamily.sans,
+        ],
+        'exp-bold': [
+          'var(--Amer-Expanded-Bold)',
+          ...defaultTheme.fontFamily.sans,
+        ],
+        plantin: ['plantin', ...defaultTheme.fontFamily.serif],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

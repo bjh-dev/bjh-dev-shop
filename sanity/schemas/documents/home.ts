@@ -1,18 +1,20 @@
+import { LuHome } from 'react-icons/lu'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'home',
-  title: 'Home',
+  title: 'Home Page',
   type: 'document',
+  icon: LuHome,
   groups: [
     {
-      title: 'Content',
       name: 'content',
+      title: 'Content',
       default: true,
     },
     {
-      title: 'SEO',
       name: 'seo',
+      title: 'SEO',
     },
   ],
   fields: [
@@ -27,6 +29,13 @@ export default defineType({
       title: 'SEO',
       type: 'seo',
       group: 'seo',
+    }),
+    defineField({
+      name: 'pageBuilder',
+      title: 'Page Builder',
+      type: 'array',
+      group: 'content',
+      of: [{ type: 'hero' }],
     }),
   ],
 })

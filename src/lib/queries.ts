@@ -29,3 +29,14 @@ export const postsQuery = groq`
     ...,
   }
 `
+
+export const productsQuery = groq`
+  *[_type == "product"]{
+    ...,
+  }
+`
+export const productBySlugQuery = groq`
+  *[_type == "product" && slug.current == $slug][0]{
+    ...,
+  }
+`

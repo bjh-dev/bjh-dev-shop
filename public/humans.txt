@@ -1,0 +1,16 @@
+/* TEAM */
+Me: Bryan J. Hickey
+Contact: bjh [at] bjh.dev
+Socials: @bryanjhickey
+From: Melbourne, Australia
+
+/* THANKS */
+Name: @leerob
+Twitter: @leerob
+URL: https://github.com/leerob/leerob.io
+
+/* SITE */
+Last update: 2022/08/18
+Standards: HTML5, CSS3
+Components: Next.JS, Tailwind CSS, TypeScript
+Software: VS Code, Hyper.js

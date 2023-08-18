@@ -66,7 +66,7 @@ export async function generateMetadata({
         process.env.NODE_ENV === 'production'
           ? `${settings?.siteUrl}`
           : `http://localhost:3000/`,
-      siteName: settings?.siteTitle || '',
+      siteName: settings?.title || '',
       images: openGraphImages || [],
       locale: 'en-AU',
       type: 'website',

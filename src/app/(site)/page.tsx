@@ -10,7 +10,7 @@ import { readToken } from '@/sanity/lib/api'
 import { getClient } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
 
-export const revalidate = 60
+export const revalidate = 0
 
 export async function generateMetadata(): Promise<Metadata> {
   const preview = draftMode().isEnabled
@@ -55,7 +55,7 @@ export async function generateMetadata(): Promise<Metadata> {
         process.env.NODE_ENV === 'production'
           ? `${settings?.siteUrl}`
           : `http://localhost:3000/`,
-      siteName: settings.siteTitle || '',
+      siteName: settings.title || '',
       images: openGraphImages || [],
       locale: 'en-AU',
       type: 'website',

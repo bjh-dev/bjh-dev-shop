@@ -1,18 +1,20 @@
+import { LuFilter } from 'react-icons/lu'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'page',
   title: 'Page',
   type: 'document',
+  icon: LuFilter,
   groups: [
     {
-      title: 'Content',
       name: 'content',
+      title: 'Content',
       default: true,
     },
     {
-      title: 'SEO',
       name: 'seo',
+      title: 'SEO',
     },
   ],
   fields: [
@@ -21,6 +23,12 @@ export default defineType({
       title: 'Title',
       type: 'string',
       group: 'content',
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'seo',
+      group: 'seo',
     }),
     defineField({
       name: 'slug',
@@ -33,10 +41,11 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'seo',
-      title: 'SEO',
-      type: 'seo',
-      group: 'seo',
+      name: 'pageBuilder',
+      title: 'Page Builder',
+      type: 'array',
+      group: 'content',
+      of: [{ type: 'hero' }],
     }),
   ],
 })

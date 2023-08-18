@@ -1,23 +1,21 @@
 import '@/app/globals.css'
 
-// eslint-disable-next-line camelcase
-import { Inter, Roboto_Mono } from 'next/font/google'
 import React from 'react'
+
+import Favicon from '@/components/global/Favicon'
+import {
+  AmerExpBold,
+  AmerExpLght,
+  AmerExpReg,
+  AmerExtBold,
+  AmerExtReg,
+  AmerExtRLght,
+} from '@/lib/fonts'
 
 if (process.env.NODE_ENV === 'production') {
   // eslint-disable-next-line no-console, func-names, @typescript-eslint/no-empty-function
   console.log = function () {}
 }
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
-
-const robotoMono = Roboto_Mono({
-  subsets: ['latin'],
-  variable: '--font-roboto-mono',
-})
 
 export default function RootLayout({
   children,
@@ -27,9 +25,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${robotoMono.variable} font-sans`}
+      className={`${AmerExpLght.variable} ${AmerExpBold.variable} ${AmerExpReg.variable} ${AmerExtRLght.variable} ${AmerExtBold.variable} ${AmerExtReg.variable} font-ext-light`}
       suppressHydrationWarning
     >
+      <head>
+        <Favicon />
+      </head>
       <body suppressHydrationWarning>{children}</body>
     </html>
   )
