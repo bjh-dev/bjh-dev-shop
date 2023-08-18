@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { LuChevronLeft } from 'react-icons/lu'
 
+import GradingCertificateOrderForm from '@/components/sections/GradingCertificateOrderForm'
+import BodyPortableText from '@/components/ui/BodyPortableText'
 import { Button } from '@/components/ui/button'
 import { ProductPayload } from '@/lib/types'
 import { urlForImage } from '@/sanity/lib/image'
@@ -31,12 +33,10 @@ function ProductPage({ data }: ProductPageProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-6 mt-12">
           <div className="col-span-1">
             <h1 className="font-ext-bold text-2xl mb-4">{data.title}</h1>
-            <p>{data.shortDescription}</p>
+            <BodyPortableText text={data.shortDescription} />
           </div>
           <div className="col-span-1 md:col-span-2 lg:col-span-1 p-6 bg-gray-200">
-            <h2 className="font-ext-bold text-xl">Order Yours Now</h2>
-            <hr className="border-rose-600 my-4" />
-            <Button>Purchase</Button>
+            <GradingCertificateOrderForm />
           </div>
         </div>
       </div>

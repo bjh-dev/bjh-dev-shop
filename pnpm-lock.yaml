@@ -83,6 +83,9 @@ dependencies:
   react-player:
     specifier: 2.12.0
     version: 2.12.0(react@18.2.0)
+  react-square-web-payments-sdk:
+    specifier: ^3.2.1
+    version: 3.2.1(react@18.2.0)
   sanity:
     specifier: 3.15.1
     version: 3.15.1(@types/node@20.5.0)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
@@ -1992,6 +1995,27 @@ packages:
     dependencies:
       base64url: 3.0.1
       tslib: 2.6.1
+    dev: false
+
+  /@square/web-payments-sdk-types@1.50.1:
+    resolution: {integrity: sha512-wUWytLrngMEN1Xylm375p+pmZGBPQWi4okbFjPxBPcR1q+FrS1mYXI8agnJe7r4CdYB3gfDtKFzo6YQZsS+ciA==}
+    dependencies:
+      typescript: 4.9.5
+    dev: false
+
+  /@square/web-sdk@2.0.1:
+    resolution: {integrity: sha512-m+pauPLJUHO4qzBNKlHRMe+qDAhQdbEd7g/v/SW8BWZARwJC0liHB4AnVAJuM/7JMFEPiT2ZO3SRt1VQsCeoYg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      '@square/web-payments-sdk-types': 1.50.1
+    dev: false
+
+  /@stitches/react@1.2.8(react@18.2.0):
+    resolution: {integrity: sha512-9g9dWI4gsSVe8bNLlb+lMkBYsnIKCZTmvqvDG+Avnn69XfmHZKiaMrx7cgTaddq7aTPPmXiTsbFcUy0xgI4+wA==}
+    peerDependencies:
+      react: '>= 16.3.0'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@swc/helpers@0.5.1:
@@ -6246,6 +6270,16 @@ packages:
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
+  /react-square-web-payments-sdk@3.2.1(react@18.2.0):
+    resolution: {integrity: sha512-XhW4snpCfUNaVqS652dDWSWJd+r9OftkqmvP9hix5ISEV8Foo9QrGDe33t1w+uMIl9ox1EWlexGb0yDe8ZYamQ==}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+    dependencies:
+      '@square/web-sdk': 2.0.1
+      '@stitches/react': 1.2.8(react@18.2.0)
+      react: 18.2.0
+    dev: false
+
   /react-style-proptype@3.2.2:
     resolution: {integrity: sha512-ywYLSjNkxKHiZOqNlso9PZByNEY+FTyh3C+7uuziK0xFXu9xzdyfHwg4S9iyiRRoPCR4k2LqaBBsWVmSBwCWYQ==}
     dependencies:
@@ -7363,6 +7397,12 @@ packages:
 
   /typedarray@0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
+    dev: false
+
+  /typescript@4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: false
 
   /typescript@5.1.6:

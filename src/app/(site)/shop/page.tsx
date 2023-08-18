@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { LuMail } from 'react-icons/lu'
 
+import BodyPortableText from '@/components/ui/BodyPortableText'
 import { Button } from '@/components/ui/button'
 import { productsQuery } from '@/lib/queries'
 import { ProductPayload } from '@/lib/types'
@@ -62,7 +63,7 @@ const ShopPageRoute = async () => {
               </div>
               <div className="flex flex-col space-y-4 p-6">
                 <h2 className="font-ext-bold">{product.title}</h2>
-                <p className="text-sm leading-5">{product.shortDescription}</p>
+                <BodyPortableText text={product.shortDescription} />
                 <Button asChild>
                   <Link href={`/shop/${product.slug.current}`}>Order Now</Link>
                 </Button>
