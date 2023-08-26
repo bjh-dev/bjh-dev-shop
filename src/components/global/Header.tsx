@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import AuthButton from '../ui/auth/AuthButton'
 import CTAButton from '../ui/CTAButton'
 import Logo from '../ui/Logo'
 
@@ -17,6 +18,9 @@ function Header() {
             {/* <Link href="/church-websites/">Church&nbsp;Websites</Link>
             <Link href="/services/">Services</Link>
             <Link href="/posts/">Posts</Link> */}
+            <div>
+              <AuthButton />
+            </div>
             <div>
               <CTAButton />
             </div>

@@ -1,11 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 import { LuCreditCard, LuLogOut, LuUser } from 'react-icons/lu'
 
-import { Button } from '../button'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -63,21 +61,7 @@ function AuthButton() {
       </div>
     )
   }
-  return (
-    <div className="flex items-center space-x-2">
-      <div>
-        <Link className="text-rose-600 hover:text-rose-800" href="/">
-          Register
-        </Link>{' '}
-        or{' '}
-      </div>
-      <div>
-        <Button variant="secondary" onClick={() => signIn()}>
-          Sign In
-        </Button>
-      </div>
-    </div>
-  )
+  return null
 }
 
 export default AuthButton
