@@ -64,7 +64,12 @@ function HeroFullImage(props: Hero) {
               <div className="mx-auto">
                 <div className="flex flex-row justify-center space-x-6">
                   {ctas.map((c) => (
-                    <CTAButton key={c._key} {...c} />
+                    <CTAButton
+                      variant="default"
+                      size="lg"
+                      key={c._key}
+                      {...c}
+                    />
                   ))}
                 </div>
                 <p className="text-xs mt-3">
