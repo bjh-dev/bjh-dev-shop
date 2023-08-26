@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { signOut, useSession } from 'next-auth/react'
 import { LuCreditCard, LuLogOut, LuUser } from 'react-icons/lu'
 
+import { parseName } from '@/lib/utils'
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,8 +18,8 @@ import {
 
 function AuthButton() {
   const session = useSession()
-  console.log('session: ', session)
   if (session?.status === 'authenticated') {
+    const nameObject = parseName(session?.data.user.name)
     return (
       <div className="flex items-center space-x-4">
         <div className="flex-shrink-0">
@@ -31,8 +33,8 @@ function AuthButton() {
                 className="h-10 w-10 rounded-full border-2 border-gray-400 hover:border-blue-600"
               />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-52" sideOffset={12} align="end">
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuContent className="w-52">
+              <DropdownMenuLabel>Hello, {nameObject.name}.</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
                 <DropdownMenuItem>
