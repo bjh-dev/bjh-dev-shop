@@ -29,6 +29,7 @@ export function parseName(input: string) {
   if (fullName.length > 0) {
     const nameTokens =
       fullName.match(
+        // eslint-disable-next-line security/detect-unsafe-regex
         /[A-ZÁ-ÚÑÜ][a-zá-úñü]+|([aeodlsz]+\s+)+[A-ZÁ-ÚÑÜ][a-zá-úñü]+/g
       ) || []
 
