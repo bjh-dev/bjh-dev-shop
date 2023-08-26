@@ -38,6 +38,8 @@ module.exports = {
   ],
 
   rules: {
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'warn',
     'no-underscore-dangle': 'off',
     'react/require-default-props': 'off',
     '@typescript-eslint/no-unused-vars': 'error',

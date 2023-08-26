@@ -40,7 +40,7 @@ export const BodyTextComponents = {
   },
   list: {
     bullet: ({ children }: any) => {
-      return <ul className="ml-10 list-disc space-y-2 py-5">{children}</ul>
+      return <ul className="ml-10 list-disc space-y-2 mb-4">{children}</ul>
     },
     number: ({ children }: any) => {
       return <ol className="ml-lg list-decimal">{children}</ol>
@@ -57,11 +57,7 @@ export const BodyTextComponents = {
       return <h4 className="pt-10 pb-4 text-2xl font-bold">{children}</h4>
     },
     normal: ({ children }: any) => {
-      return (
-        <p className="pb-2 text-base md:text-xl lg:text-base md:leading-normal">
-          {children}
-        </p>
-      )
+      return <p className="pb-4 md:leading-normal">{children}</p>
     },
     blockquote: ({ children }: any) => {
       return (

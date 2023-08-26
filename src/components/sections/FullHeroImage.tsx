@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Hero } from '@/lib/types'
+import { Hero } from '@/lib/types/sanity'
 import { urlForImage } from '@/sanity/lib/image'
 
 import Animation from '../ui/Animation'
@@ -23,6 +23,7 @@ function HeroFullImage(props: Hero) {
           sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1920px"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
           fill
+          priority
         />
         <div className="absolute inset-x-0 top-0 bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl">
           <svg

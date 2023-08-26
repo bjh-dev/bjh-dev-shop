@@ -4,7 +4,7 @@ import { useLiveQuery } from 'next-sanity/preview'
 
 import Page from '@/components/pages/page/Page'
 import { pageBySlugQuery } from '@/lib/queries'
-import { PagePayload } from '@/lib/types'
+import { PagePayload } from '@/lib/types/sanity'
 
 type PageProps = {
   data: PagePayload

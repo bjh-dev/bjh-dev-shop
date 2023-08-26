@@ -4,7 +4,7 @@ import { useLiveQuery } from 'next-sanity/preview'
 
 import { PostPage } from '@/components/pages/post/Post'
 import { postBySlugQuery } from '@/lib/queries'
-import { PostPayload } from '@/lib/types'
+import { PostPayload } from '@/lib/types/sanity'
 
 type PostsProps = {
   post: PostPayload

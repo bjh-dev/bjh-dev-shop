@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import React, { useRef } from 'react'
 
 function Animation({
+  className,
+  key,
   fade,
   duration,
   slideInLeft,
@@ -13,6 +15,8 @@ function Animation({
   children,
   delay,
 }: {
+  className?: string
+  key?: string
   children: React.ReactNode
   fade?: boolean
   duration?: number
@@ -26,6 +30,8 @@ function Animation({
 
   return (
     <motion.div
+      className={className}
+      key={key ?? undefined}
       transition={{
         delay: delay ?? 0,
         duration: duration ?? 0.5,

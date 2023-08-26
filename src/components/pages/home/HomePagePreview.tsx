@@ -4,7 +4,7 @@ import { useLiveQuery } from 'next-sanity/preview'
 
 import HomePage, { type HomePageProps } from '@/components/pages/home/HomePage'
 import { homePageQuery } from '@/lib/queries'
-import { HomePagePayload } from '@/lib/types'
+import { HomePagePayload } from '@/lib/types/sanity'
 
 function HomePagePreview({ data: initialData }: HomePageProps) {
   const [data] = useLiveQuery<HomePagePayload | null>(

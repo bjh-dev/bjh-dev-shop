@@ -3,7 +3,7 @@
 import { useLiveQuery } from 'next-sanity/preview'
 
 import { productBySlugQuery } from '@/lib/queries'
-import { ProductPayload } from '@/lib/types'
+import { ProductPayload } from '@/lib/types/sanity'
 
 import ProductPage, { ProductPageProps } from './ProductPage'
 

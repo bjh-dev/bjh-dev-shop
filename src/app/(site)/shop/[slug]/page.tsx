@@ -5,9 +5,11 @@ import React from 'react'
 import ProductPage from '@/components/pages/product/ProductPage'
 import ProductPagePreview from '@/components/pages/product/ProductPagePreview'
 import { productBySlugQuery } from '@/lib/queries'
-import { ProductPayload } from '@/lib/types'
+import { ProductPayload } from '@/lib/types/sanity'
 import { readToken } from '@/sanity/lib/api'
 import { getClient } from '@/sanity/lib/client'
+
+export const revalidate = 0
 
 const ProductPageRoute = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params

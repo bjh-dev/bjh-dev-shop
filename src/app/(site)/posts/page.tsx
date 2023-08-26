@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import { postsQuery, settingsQuery } from '@/lib/queries'
-import { PostPayload, SettingsPayload } from '@/lib/types'
+import { PostPayload, SettingsPayload } from '@/lib/types/sanity'
 import { getClient } from '@/sanity/lib/client'
 
 type PostsProps = {

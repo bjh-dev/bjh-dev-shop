@@ -9,7 +9,7 @@ import {
 } from 'react-icons/fa'
 
 import { settingsQuery } from '@/lib/queries'
-import { SettingsPayload } from '@/lib/types'
+import { SettingsPayload } from '@/lib/types/sanity'
 import { getClient } from '@/sanity/lib/client'
 
 import ThemeToggle from '../theme-toggle'
@@ -42,7 +42,7 @@ const Footer = async () => {
                 href={`https://facebook.com/${facebookPage}/`}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-blue-600 dark:hover:text-blue-600"
+                className="hover:text-blue-600 dark:hover:text-blue-600 outline-rose-600"
               >
                 <span className="sr-only">Facebook</span>
                 <FaFacebook />
@@ -53,7 +53,7 @@ const Footer = async () => {
                 href={`https://twitter.com/${twitterCompanyProfile}/`}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-blue-400 dark:hover:text-blue-400"
+                className="hover:text-blue-400 dark:hover:text-blue-400 outline-rose-600"
               >
                 <span className="sr-only">Twitter</span>
                 <FaTwitter />
@@ -64,7 +64,7 @@ const Footer = async () => {
                 href={`https://github.com/${githubCompanyProfile}/`}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-blue-600 dark:hover:text-blue-600"
+                className="hover:text-blue-600 dark:hover:text-blue-600 outline-rose-600"
               >
                 <span className="sr-only">Github</span>
                 <FaGithub />
@@ -75,7 +75,7 @@ const Footer = async () => {
                 href={`https://instagram.com/${instagramBusinessProfile}/`}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-rose-600 dark:hover:text-rose-600"
+                className="hover:text-rose-600 dark:hover:text-rose-600 outline-rose-600"
               >
                 <span className="sr-only">Instagram</span>
                 <FaInstagram />
@@ -86,7 +86,7 @@ const Footer = async () => {
                 href={`https://www.pinterest.com.au/${pinterestBusinessProfile}/`}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-rose-600 dark:hover:text-rose-600"
+                className="hover:text-rose-600 dark:hover:text-rose-600 outline-rose-600"
               >
                 <span className="sr-only">Pinterest</span>
                 <FaPinterest />
@@ -97,7 +97,7 @@ const Footer = async () => {
                 href={`https://linkedin.com/in/${linkedinBusinessPage}/`}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-blue-600 dark:hover:text-blue-600"
+                className="hover:text-blue-600 dark:hover:text-blue-600 outline-rose-600"
               >
                 <span className="sr-only">LinkedIn</span>
                 <FaLinkedin />
@@ -108,7 +108,7 @@ const Footer = async () => {
                 href={`https://linkedin.com/in/${youTubeChannel}/`}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-rose-600 dark:hover:text-rose-600"
+                className="hover:text-rose-600 dark:hover:text-rose-600 outline-rose-600"
               >
                 <span className="sr-only">YouTube</span>
                 <FaYoutube />

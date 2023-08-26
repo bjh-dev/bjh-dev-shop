@@ -1,5 +1,5 @@
 import ScrollUp from '@/components/ScollUp'
-import { PostPayload } from '@/lib/types'
+import { PostPayload } from '@/lib/types/sanity'
 
 type PostsPageProps = {
   post: PostPayload

@@ -6,7 +6,7 @@ import Guide from '@/components/sections/Guide'
 import Plan from '@/components/sections/Plan'
 import Steps from '@/components/sections/Steps'
 import { metrics, mistakes, outcomes, planSteps } from '@/lib/data'
-import { HomePagePayload } from '@/lib/types'
+import { HomePagePayload } from '@/lib/types/sanity'
 
 export interface HomePageProps {
   data: HomePagePayload

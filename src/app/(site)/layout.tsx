@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { Metadata } from 'next'
 import React from 'react'
 
+import AuthProvider from '@/components/global/AuthProvider'
 import Footer from '@/components/global/Footer'
 import Header from '@/components/global/Header'
 import ThemeProvider from '@/components/theme-provider'
@@ -40,11 +41,13 @@ export default async function PagesLayout({
   return (
     <div suppressHydrationWarning>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <div className="flex flex-col min-h-screen bg-gray-100 text-gray-800">
-          <Header />
-          <main className="mt-16 mb-auto">{children}</main>
-          <Footer />
-        </div>
+        <AuthProvider>
+          <div className="flex flex-col min-h-screen bg-gray-100 text-gray-800">
+            <Header />
+            <main className="mt-16 mb-auto">{children}</main>
+            <Footer />
+          </div>
+        </AuthProvider>
       </ThemeProvider>
       <Analytics />
     </div>
