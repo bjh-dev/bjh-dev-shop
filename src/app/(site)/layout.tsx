@@ -6,6 +6,7 @@ import AuthProvider from '@/components/global/AuthProvider'
 import Footer from '@/components/global/Footer'
 import Header from '@/components/global/Header'
 import ThemeProvider from '@/components/theme-provider'
+import DevlayoutHelper from '@/components/ui/DevLayoutHelper'
 
 export const metadata: Metadata = {
   generator: 'Next.js',
@@ -39,7 +40,7 @@ export default async function PagesLayout({
   children: React.ReactNode
 }) {
   return (
-    <div suppressHydrationWarning>
+    <div className="relative" suppressHydrationWarning>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <AuthProvider>
           <div className="flex flex-col min-h-screen bg-gray-100 text-gray-800 dark:text-gray-50 dark:bg-gray-800">
@@ -50,6 +51,7 @@ export default async function PagesLayout({
         </AuthProvider>
       </ThemeProvider>
       <Analytics />
+      {process.env.NODE_ENV === 'development' && <DevlayoutHelper />}
     </div>
   )
 }
