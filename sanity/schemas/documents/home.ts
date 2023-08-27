@@ -1,5 +1,5 @@
 import { LuHome } from 'react-icons/lu'
-import { defineField, defineType } from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'home',
@@ -35,7 +35,13 @@ export default defineType({
       title: 'Page Builder',
       type: 'array',
       group: 'content',
-      of: [{ type: 'hero' }],
+      of: [
+        defineArrayMember({ type: 'hero' }),
+        defineArrayMember({ type: 'steps' }),
+        defineArrayMember({ type: 'plan' }),
+        defineArrayMember({ type: 'guide' }),
+        defineArrayMember({ type: 'features' }),
+      ],
     }),
   ],
 })

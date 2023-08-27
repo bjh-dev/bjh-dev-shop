@@ -6,19 +6,15 @@ import { urlForImage } from '@/sanity/lib/image'
 import Animation from '../ui/Animation'
 import BodyPortableText from '../ui/BodyPortableText'
 import CTAButton from '../ui/CTAButton'
-import HeaderPortableText from '../ui/HeaderPortableText'
 
 function HeroFullImage(props: Hero) {
-  const { title, subtitle, media, ctas = [] } = props
+  const { subtitle, media, ctas = [] } = props
   return (
     <div className="hero-full-image">
       <div className="relative h-[60vh] lg:h-[70vh] isolate overflow-hidden py-14 2xl:container">
         <div className="absolute -z-10 bg-blue-900 bg-blend-overlay top-0 bottom-0 left-0 right-0 opacity-60" />
         <Image
-          src={urlForImage(media?.image)
-            .width(1920)
-            .height(1080)
-            .url()}
+          src={urlForImage(media?.image).url()}
           alt={media?.image?.alt || 'hero image'}
           sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1920px"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
@@ -53,7 +49,26 @@ function HeroFullImage(props: Hero) {
         <div className="left-0 right-0 top-0 bottom-0 w-full h-full">
           <div className="px-4 flex flex-col h-full justify-center content-center my-auto max-w-3xl mx-auto text-center text-white space-y-6">
             <Animation fade duration={0.3} slideInTop>
-              <HeaderPortableText text={title} />
+              <h1 className="font-plantin text-6xl md:text-7xl lg:text-8xl tracking-tight">
+                Get a{' '}
+                <span className="underline underline-offset-8 decoration-rose-600 decoration-4">
+                  Better Website
+                </span>{' '}
+                <span
+                  style={{
+                    fontFamily:
+                      'Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif',
+                    fontWeight: 'normal',
+                    fontSize: '110%',
+                    fontStyle: 'italic',
+                  }}
+                >
+                  &amp;
+                </span>{' '}
+                <span className="underline underline-offset-8 decoration-blue-600 decoration-4">
+                  Grow Your Business
+                </span>
+              </h1>
             </Animation>
             <Animation fade duration={0.8}>
               <div className="font-ext-reg">

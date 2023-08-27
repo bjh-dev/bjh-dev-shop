@@ -14,7 +14,11 @@ import link from './objects/link'
 import media from './objects/media'
 import portableTextSimple from './objects/portableTextSimple'
 import video from './objects/video'
+import features from './sections/features'
+import guide from './sections/guide'
 import hero from './sections/hero'
+import plan from './sections/plan'
+import steps from './sections/steps'
 
 export const PREVIEWABLE_DOCUMENT_TYPES: string[] = [
   home.name,
@@ -40,6 +44,10 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     seo,
     video,
     // sections
+    features,
+    guide,
     hero,
+    plan,
+    steps,
   ],
 }

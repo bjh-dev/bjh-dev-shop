@@ -47,7 +47,6 @@ function Animation({
         x: 0,
         y: 0,
       }}
-      viewport={{ once: true, amount: 0.9, margin: '10px' }}
       ref={ref}
     >
       {children}
