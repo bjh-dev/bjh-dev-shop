@@ -17,7 +17,7 @@ interface FeaturesProps {
 
 function Features(props: FeaturesProps) {
   const { features, description } = props
-  console.log('feature Props: ', props)
+  // console.log('feature Props: ', props)
 
   return (
     <div className="light:bg-gray-200 py-16 lg:py-24">

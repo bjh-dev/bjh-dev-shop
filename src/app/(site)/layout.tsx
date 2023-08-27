@@ -5,7 +5,6 @@ import React from 'react'
 import AuthProvider from '@/components/global/AuthProvider'
 import Footer from '@/components/global/Footer'
 import Header from '@/components/global/Header'
-import ThemeProvider from '@/components/theme-provider'
 import DevlayoutHelper from '@/components/ui/DevLayoutHelper'
 
 export const metadata: Metadata = {
@@ -41,15 +40,13 @@ export default async function PagesLayout({
 }) {
   return (
     <div className="relative" suppressHydrationWarning>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <AuthProvider>
-          <div className="flex flex-col min-h-screen bg-gray-100 text-gray-800 dark:text-gray-50 dark:bg-gray-800">
-            <Header />
-            <main className="mt-16 mb-auto">{children}</main>
-            <Footer />
-          </div>
-        </AuthProvider>
-      </ThemeProvider>
+      <AuthProvider>
+        <div className="flex flex-col min-h-screen bg-gray-100 text-gray-800 dark:text-gray-50 dark:bg-gray-800">
+          <Header />
+          <main className="mt-16 mb-auto">{children}</main>
+          <Footer />
+        </div>
+      </AuthProvider>
       <Analytics />
       {process.env.NODE_ENV === 'development' && <DevlayoutHelper />}
     </div>
