@@ -40,7 +40,7 @@ type LinkType = {
   url?: string
 }
 
-type SimpleImageType = {
+export type SimpleImageType = {
   _type: 'imageSimple'
   asset: ReferenceType
   alt: string
