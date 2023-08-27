@@ -11,7 +11,7 @@ function HeroFullImage(props: Hero) {
   const { subtitle, media, ctas = [] } = props
   return (
     <div className="hero-full-image">
-      <div className="relative h-[60vh] lg:h-[70vh] isolate overflow-hidden py-14 2xl:container">
+      <div className="relative h-[100vh] sm:h-[80vh] xl:h-[70vh] isolate overflow-hidden py-14">
         <div className="absolute -z-10 bg-blue-900 bg-blend-overlay top-0 bottom-0 left-0 right-0 opacity-60" />
         <Image
           src={urlForImage(media?.image).url()}
