@@ -1,13 +1,13 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import React, { useRef } from 'react'
 
 function Animation({
   className,
   key,
   fade,
-  duration,
+  duration = 0.2,
   slideInLeft,
   slideInTop,
   slideInBottom,
@@ -16,7 +16,7 @@ function Animation({
   delay,
 }: {
   className?: string
-  key?: string
+  key?: string | number
   children: React.ReactNode
   fade?: boolean
   duration?: number
@@ -27,14 +27,15 @@ function Animation({
   delay?: number
 }) {
   const ref = useRef(null)
-
+  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+  const isInView = useInView(ref)
   return (
     <motion.div
       className={className}
       key={key ?? undefined}
       transition={{
-        delay: delay ?? 0,
-        duration: duration ?? 0.5,
+        delay,
+        duration,
       }}
       initial={{
         opacity: fade ? 0 : 1,
@@ -46,6 +47,7 @@ function Animation({
         x: 0,
         y: 0,
       }}
+      viewport={{ once: true, amount: 0.9, margin: '10px' }}
       ref={ref}
     >
       {children}

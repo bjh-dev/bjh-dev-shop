@@ -6,7 +6,7 @@ import Logo from '../ui/Logo'
 
 function Header() {
   return (
-    <div className="fixed w-full top-0 z-50 bg-gray-100 shadow-md">
+    <div className="fixed w-full top-0 z-50 bg-gray-100 dark:bg-gray-800 shadow-md">
       <div className="container py-4">
         <div className="flex w-full items-center justify-between">
           <div>

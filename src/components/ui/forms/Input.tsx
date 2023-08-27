@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { UseFormRegister } from 'react-hook-form'
 import { LuAlertCircle } from 'react-icons/lu'
 
-import { generateHtmlId } from '@/lib/utils'
+import { generateHtmlId } from '@/lib/helpers'
 
 type InputProps = {
   className?: string

@@ -24,22 +24,11 @@ interface CTAButtonProps {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function CTAButton(props: CTAButtonProps) {
   const { reference, url, text, size = 'default', variant = 'default' } = props
-  if (!reference && !url && !text) {
-    const CtaProp = {
-      url: 'https://calendly.com/bjhdev/intro-call',
-      text: 'Schedule a Call',
-    }
-    return (
-      <Button size={size} variant={variant} asChild>
-        <Link href={CtaProp.url}>{CtaProp.text}</Link>
-      </Button>
-    )
-  }
   if (!reference) {
     return (
       <Button size={size} variant={variant} asChild>
         <a href={url} target="_blank" rel="noopener noreferrer">
-          {text}
+          {text || 'Schedule a call'}
         </a>
       </Button>
     )

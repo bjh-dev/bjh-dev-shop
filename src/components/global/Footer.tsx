@@ -33,7 +33,7 @@ const Footer = async () => {
   } = settings
 
   return (
-    <footer>
+    <footer className="dark:bg-gray-800">
       <div className="container">
         <div className="py-12 md:flex md:items-center md:justify-between">
           <div className="flex items-center justify-center space-x-6 md:order-2">

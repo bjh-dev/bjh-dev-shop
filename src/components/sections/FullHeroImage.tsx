@@ -72,7 +72,7 @@ function HeroFullImage(props: Hero) {
                     />
                   ))}
                 </div>
-                <p className="text-xs mt-3">
+                <p className="text-xs mt-6">
                   All calls are{' '}
                   <span className="underline underline-offset-2">
                     confidential

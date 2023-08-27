@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { signOut, useSession } from 'next-auth/react'
 import { LuCreditCard, LuLogOut, LuUser } from 'react-icons/lu'
 
-import { parseName } from '@/lib/utils'
+import { parseName } from '@/lib/helpers'
 
 import {
   DropdownMenu,

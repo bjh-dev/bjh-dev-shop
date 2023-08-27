@@ -42,7 +42,7 @@ export default async function PagesLayout({
     <div suppressHydrationWarning>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <AuthProvider>
-          <div className="flex flex-col min-h-screen bg-gray-100 text-gray-800">
+          <div className="flex flex-col min-h-screen bg-gray-100 text-gray-800 dark:text-gray-50 dark:bg-gray-800">
             <Header />
             <main className="mt-16 mb-auto">{children}</main>
             <Footer />
