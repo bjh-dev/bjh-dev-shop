@@ -19,7 +19,7 @@ function Features(props: FeaturesProps) {
   return (
     <div className="light:bg-gray-200 py-16 lg:py-24">
       <div className="container lg:grid lg:grid-cols-3 lg:gap-x-8">
-        <div>
+        <div className="col-span-1">
           <h2 className="font-plantin text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-6xl tracking-tight">
             {titleArray[0]}{' '}
             <span
@@ -33,10 +33,10 @@ function Features(props: FeaturesProps) {
           </h2>
         </div>
         <div className="mt-12 lg:col-span-2 lg:mt-0">
-          <dl className="space-y-10 sm:grid sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3 sm:gap-x-6 sm:gap-y-4 sm:space-y-0 lg:gap-x-8">
+          <dl className="flex flex-col space-y-6 md:grid md:space-y-0 md:grid-cols-2 md:gap-y-12 md:gap-x-6 ">
             {features.slice(0, -1).map((feature) => (
-              <>
-                <dt key={feature.name}>
+              <div key={feature.name}>
+                <dt>
                   {feature.complete ? (
                     <FaCheck
                       className="absolute h-6 w-6 text-green-500"
@@ -55,7 +55,7 @@ function Features(props: FeaturesProps) {
                 <dd className="light:text-gray-500 mt-2 ml-9 text-sm dark:text-gray-300">
                   {feature.description}
                 </dd>
-              </>
+              </div>
             ))}
           </dl>
           <dl
