@@ -1,7 +1,5 @@
 import { FaCheck, FaTimes } from 'react-icons/fa'
 
-import Animation from '../ui/Animation'
-
 type FeaturesProps = {
   title: string
   features: {
@@ -37,13 +35,8 @@ function Features(props: FeaturesProps) {
         <div className="mt-12 lg:col-span-2 lg:mt-0">
           <dl className="space-y-10 sm:grid sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3 sm:gap-x-6 sm:gap-y-4 sm:space-y-0 lg:gap-x-8">
             {features.slice(0, -1).map((feature) => (
-              <Animation
-                fade
-                slideInLeft
-                key={feature.name}
-                className="relative"
-              >
-                <dt>
+              <>
+                <dt key={feature.name}>
                   {feature.complete ? (
                     <FaCheck
                       className="absolute h-6 w-6 text-green-500"
@@ -62,35 +55,33 @@ function Features(props: FeaturesProps) {
                 <dd className="light:text-gray-500 mt-2 ml-9 text-sm dark:text-gray-300">
                   {feature.description}
                 </dd>
-              </Animation>
+              </>
             ))}
           </dl>
-          <Animation fade slideInBottom key={1236878}>
-            <dl
-              key="123456"
-              className="relative col-span-2 mt-8 rounded-md border border-rose-600 py-4 px-6"
-            >
-              <dt>
-                {lastFeature.complete ? (
-                  <FaCheck
-                    className="absolute h-6 w-6 text-green-500"
-                    aria-hidden="true"
-                  />
-                ) : (
-                  <FaTimes
-                    className="absolute h-6 w-6 text-rose-600"
-                    aria-hidden="true"
-                  />
-                )}
-                <p className="light:text-gray-900 ml-9 font-plantin text-lg font-bold leading-6 dark:text-gray-100">
-                  {lastFeature.name}
-                </p>
-              </dt>
-              <dd className="light:text-gray-500 mt-2 ml-9 text-sm dark:text-gray-300">
-                {lastFeature.description}
-              </dd>
-            </dl>
-          </Animation>
+          <dl
+            key="123456"
+            className="relative col-span-2 mt-8 rounded-md border border-rose-600 py-4 px-6"
+          >
+            <dt>
+              {lastFeature.complete ? (
+                <FaCheck
+                  className="absolute h-6 w-6 text-green-500"
+                  aria-hidden="true"
+                />
+              ) : (
+                <FaTimes
+                  className="absolute h-6 w-6 text-rose-600"
+                  aria-hidden="true"
+                />
+              )}
+              <p className="light:text-gray-900 ml-9 font-plantin text-lg font-bold leading-6 dark:text-gray-100">
+                {lastFeature.name}
+              </p>
+            </dt>
+            <dd className="light:text-gray-500 mt-2 ml-9 text-sm dark:text-gray-300">
+              {lastFeature.description}
+            </dd>
+          </dl>
         </div>
       </div>
     </div>

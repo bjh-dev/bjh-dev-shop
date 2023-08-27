@@ -1,6 +1,5 @@
 import Image from 'next/image'
 
-import Animation from '../ui/Animation'
 import CTAButton from '../ui/CTAButton'
 
 type GuideProps = {
@@ -44,7 +43,7 @@ function Guide(props: GuideProps) {
           <p className="mt-5">{description}</p>
           <div className="my-12 grid grid-cols-1 gap-y-12 gap-x-12 sm:grid-cols-2">
             {metrics.map((item) => (
-              <Animation fade slideInLeft key={item.id}>
+              <div key={item.id}>
                 {item.stat && (
                   <span className="block font-exp-bold text-2xl">
                     {item.stat}
@@ -56,7 +55,7 @@ function Guide(props: GuideProps) {
                   </span>{' '}
                   {item.rest}
                 </span>
-              </Animation>
+              </div>
             ))}
           </div>
           <p className="my-6 border-t border-gray-700 py-6 text-xs">

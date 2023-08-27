@@ -1,4 +1,3 @@
-import Animation from '../ui/Animation'
 import CTAButton from '../ui/CTAButton'
 
 type PlanProps = {
@@ -26,11 +25,9 @@ function Plan(props: PlanProps) {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
             {features.map((feature) => {
               return (
-                <Animation
+                <div
                   key={feature.name}
                   className="bg-gray-50 px-6 py-12 shadow-md dark:bg-gray-700"
-                  fade
-                  slideInLeft
                 >
                   <div className="flow-root">
                     <div>
@@ -46,7 +43,7 @@ function Plan(props: PlanProps) {
                       <p className="text-sm">{feature.description}</p>
                     </div>
                   </div>
-                </Animation>
+                </div>
               )
             })}
           </div>

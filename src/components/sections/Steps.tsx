@@ -1,5 +1,3 @@
-import Animation from '../ui/Animation'
-
 type StepsProps = {
   title: string
   steps: {
@@ -19,19 +17,12 @@ function Steps(props: StepsProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 pt-28 pb-6">
             {steps.map((step) => {
               return (
-                <Animation
-                  className="col-span-1"
-                  key={step.title}
-                  fade
-                  slideInLeft
-                >
-                  <div className="border-blue-600 px-6 last:border-none sm:border-b lg:border-b-0 lg:border-r">
-                    <h3 className="font-plantin text-xl font-medium tracking-tight">
-                      {step.title}
-                    </h3>
-                    <p className="py-6 text-sm">{step.copy}</p>
-                  </div>
-                </Animation>
+                <div className="border-blue-600 px-6 last:border-none sm:border-b lg:border-b-0 lg:border-r">
+                  <h3 className="font-plantin text-xl font-medium tracking-tight">
+                    {step.title}
+                  </h3>
+                  <p className="py-6 text-sm">{step.copy}</p>
+                </div>
               )
             })}
           </div>
