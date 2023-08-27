@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 
 import AuthButton from '../ui/auth/AuthButton'
@@ -6,12 +8,17 @@ import Logo from '../ui/Logo'
 
 function Header() {
   return (
-    <div className="fixed w-full top-0 z-50 bg-gray-100 dark:bg-gray-800 shadow-md">
+    <div className="fixed w-full top-0 z-50 bg-gray-100 dark:bg-gray-700 shadow-md">
       <div className="container py-4">
         <div className="flex w-full items-center justify-between">
-          <div>
+          <div className="dark:hidden">
             <Link href="/" className="w-16 h-auto block outline-blue-600">
               <Logo color />
+            </Link>
+          </div>
+          <div className="hidden dark:block">
+            <Link href="/" className="w-16 h-auto block outline-blue-600">
+              <Logo white />
             </Link>
           </div>
           <div className="flex space-x-4 items-center">

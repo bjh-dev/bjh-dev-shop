@@ -3,6 +3,7 @@ import '@/app/globals.css'
 import React from 'react'
 
 import Favicon from '@/components/global/Favicon'
+import ThemeProvider from '@/components/theme-provider'
 import {
   AmerExpBold,
   AmerExpLght,
@@ -31,7 +32,11 @@ export default function RootLayout({
       <head>
         <Favicon />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
