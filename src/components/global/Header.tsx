@@ -31,7 +31,7 @@ function Header() {
             <div>
               <CTAButton
                 url="https://calendly.com/bjhdev/intro-call"
-                text="Schedule a call today!"
+                text="Schedule a call"
               />
             </div>
           </div>
