@@ -79,7 +79,10 @@ function Guide(props: GuideProps) {
             celebrated in public. We&apos;re happy to talk with you about our
             process and work over a call.
           </p>
-          <CTAButton />
+          <CTAButton
+            url="https://calendly.com/bjhdev/intro-call"
+            text="Schedule a call today!"
+          />
         </div>
       </div>
     </div>
