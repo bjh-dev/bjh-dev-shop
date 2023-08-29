@@ -29,7 +29,10 @@ function Header() {
               <AuthButton />
             </div>
             <div>
-              <CTAButton />
+              <CTAButton
+                url="https://calendly.com/bjhdev/intro-call"
+                text="Schedule a call today!"
+              />
             </div>
           </div>
         </div>
