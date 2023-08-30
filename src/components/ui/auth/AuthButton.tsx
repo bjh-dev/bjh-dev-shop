@@ -20,13 +20,14 @@ function AuthButton() {
   const session = useSession()
   if (session?.status === 'authenticated') {
     const nameObject = parseName(session?.data.user.name)
+    console.log('session in header: ', session)
     return (
       <div className="flex items-center space-x-4">
         <div className="flex-shrink-0">
           <DropdownMenu>
             <DropdownMenuTrigger asChild className="outline-blue">
               <Image
-                src={session?.data.user.image ?? '/profile.jpeg'}
+                src={session?.data.user.image ?? '/images/profile.jpeg'}
                 alt={session?.data.user.name ?? 'Unknown'}
                 width={80}
                 height={80}

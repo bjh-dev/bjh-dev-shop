@@ -52,16 +52,16 @@ function CredentialsForm() {
 
   // eslint-disable-next-line consistent-return
   const onSubmit: SubmitHandler<IFormValues> = async (data) => {
-    const signInResponse = await signIn('credentials', {
+    const registerResponse = await signIn('credentials', {
       email: data.email,
       password: data.password,
       redirect: false,
     })
 
-    if (signInResponse && !signInResponse.error) {
+    if (registerResponse && !registerResponse.error) {
       return router.push('/')
     }
-    console.log('form data:', data)
+    // console.log('form data:', data)
   }
 
   return (
