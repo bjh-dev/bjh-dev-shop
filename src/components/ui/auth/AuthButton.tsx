@@ -20,7 +20,7 @@ function AuthButton() {
   const session = useSession()
   if (session?.status === 'authenticated') {
     const nameObject = parseName(session?.data.user.name)
-    console.log('session in header: ', session)
+    // console.log('session in header: ', session)
     return (
       <div className="flex items-center space-x-4">
         <div className="flex-shrink-0">

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/no-unstable-nested-components */
 import { PortableText, PortableTextComponents } from '@portabletext/react'
