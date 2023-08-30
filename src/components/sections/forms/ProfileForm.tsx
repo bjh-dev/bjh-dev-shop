@@ -30,7 +30,7 @@ const schema = yup.object({
     // check minimum characters
     .min(6, 'Password must have at least 6 characters')
     // different error messages for different requirements
-    .matches(/[0-9]/, getCharacterValidationError('digit')),
+    .matches(/\d/, getCharacterValidationError('digit')),
   confirmPassword: yup
     .string()
     .oneOf([yup.ref('password')], 'Passwords must match'),
