@@ -56,10 +56,6 @@ function ProfileForm() {
     formState: { errors },
   } = useForm<IFormValues>({
     resolver: yupResolver(schema),
-    defaultValues: {
-      name: values?.data?.user.name,
-      email: values?.data?.user.email,
-    },
   })
 
   // eslint-disable-next-line consistent-return
