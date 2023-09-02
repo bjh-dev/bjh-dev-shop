@@ -52,10 +52,10 @@ dependencies:
     version: 3.16.2(@babel/runtime@7.22.11)(@codemirror/lint@6.4.1)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.0.4)(codemirror@6.0.1)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
   '@stripe/react-stripe-js':
     specifier: 2.1.2
-    version: 2.1.2(@stripe/stripe-js@2.1.0)(react-dom@18.2.0)(react@18.2.0)
+    version: 2.1.2(@stripe/stripe-js@2.1.1)(react-dom@18.2.0)(react@18.2.0)
   '@stripe/stripe-js':
-    specifier: 2.1.0
-    version: 2.1.0
+    specifier: 2.1.1
+    version: 2.1.1
   '@tailwindcss/container-queries':
     specifier: 0.1.1
     version: 0.1.1(tailwindcss@3.3.3)
@@ -2335,21 +2335,21 @@ packages:
       base64url: 3.0.1
     dev: false
 
-  /@stripe/react-stripe-js@2.1.2(@stripe/stripe-js@2.1.0)(react-dom@18.2.0)(react@18.2.0):
+  /@stripe/react-stripe-js@2.1.2(@stripe/stripe-js@2.1.1)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-2JcKRvOdMD698uGrY0cINLHb6XHnY24L+wlWlw2+TbI2aXlQZ9t8Mc+KssFES+EuNgISbrp7fJR3w/13epfiOw==}
     peerDependencies:
       '@stripe/stripe-js': ^1.44.1 || ^2.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@stripe/stripe-js': 2.1.0
+      '@stripe/stripe-js': 2.1.1
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@stripe/stripe-js@2.1.0:
-    resolution: {integrity: sha512-AdMHWqIq/s3TLmoyuzdb6l21STKDKNm82cjce1VelyQGinVNjVgSEPH5UDtxENEP7OzgMZH8RTphFMi0fMJGLQ==}
+  /@stripe/stripe-js@2.1.1:
+    resolution: {integrity: sha512-V+0z21/YNbvIX0b2Fo6mE4w5kiihrdytAwVPG66RRWvkAe4COumywRfaWrBTmVQF2aAmxoRpeyTM1LKWbiOK6Q==}
     dev: false
 
   /@swc/helpers@0.5.1:
