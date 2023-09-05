@@ -103,7 +103,7 @@ dependencies:
     version: 4.23.1(next@13.4.19)(react-dom@18.2.0)(react@18.2.0)
   next-sanity:
     specifier: 5.4.6
-    version: 5.4.6(@sanity/client@6.4.9)(@sanity/icons@2.4.1)(@sanity/types@3.16.2)(@sanity/ui@1.8.2)(next@13.4.19)(react@18.2.0)(sanity@3.16.4)(styled-components@5.3.11)
+    version: 5.4.6(@sanity/client@6.4.9)(@sanity/icons@2.4.1)(@sanity/types@3.16.4)(@sanity/ui@1.8.2)(next@13.4.19)(react@18.2.0)(sanity@3.16.4)(styled-components@5.3.11)
   next-themes:
     specifier: 0.2.1
     version: 0.2.1(next@13.4.19)(react-dom@18.2.0)(react@18.2.0)
@@ -161,8 +161,8 @@ devDependencies:
     specifier: 0.5.6
     version: 0.5.6(tailwindcss@3.3.3)
   '@tailwindcss/typography':
-    specifier: 0.5.9
-    version: 0.5.9(tailwindcss@3.3.3)
+    specifier: 0.5.10
+    version: 0.5.10(tailwindcss@3.3.3)
   '@types/bcrypt':
     specifier: 5.0.0
     version: 5.0.0
@@ -2383,8 +2383,8 @@ packages:
       tailwindcss: 3.3.3(ts-node@10.9.1)
     dev: true
 
-  /@tailwindcss/typography@0.5.9(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
+  /@tailwindcss/typography@0.5.10(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
@@ -6015,7 +6015,7 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /next-sanity@5.4.6(@sanity/client@6.4.9)(@sanity/icons@2.4.1)(@sanity/types@3.16.2)(@sanity/ui@1.8.2)(next@13.4.19)(react@18.2.0)(sanity@3.16.4)(styled-components@5.3.11):
+  /next-sanity@5.4.6(@sanity/client@6.4.9)(@sanity/icons@2.4.1)(@sanity/types@3.16.4)(@sanity/ui@1.8.2)(next@13.4.19)(react@18.2.0)(sanity@3.16.4)(styled-components@5.3.11):
     resolution: {integrity: sha512-VgbLxYfgzLETNXKuvShhtaYKlz7DDb5QlFvvjf0eF82lIevI1c0jGHgPRhOTRuv0csvy9FVFCyMlxoc+BkAVmQ==}
     engines: {node: '>=16.14'}
     peerDependencies:
@@ -6031,7 +6031,7 @@ packages:
       '@sanity/client': 6.4.9
       '@sanity/icons': 2.4.1(react@18.2.0)
       '@sanity/preview-kit': 3.1.6(@sanity/client@6.4.9)(react@18.2.0)
-      '@sanity/types': 3.16.2
+      '@sanity/types': 3.16.4
       '@sanity/ui': 1.8.2(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       '@sanity/webhook': 3.0.1
       groq: 3.15.1
