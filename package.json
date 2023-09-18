@@ -32,7 +32,7 @@
     "@sanity/ui": "1.8.2",
     "@sanity/vision": "3.16.7",
     "@stripe/react-stripe-js": "2.3.0",
-    "@stripe/stripe-js": "2.1.5",
+    "@stripe/stripe-js": "2.1.6",
     "@tailwindcss/container-queries": "0.1.1",
     "@vercel/analytics": "1.0.2",
     "@vercel/postgres": "0.4.1",
