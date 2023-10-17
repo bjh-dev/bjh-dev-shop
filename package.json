@@ -16,7 +16,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@auth/core": "0.16.1",
+    "@auth/core": "0.17.0",
     "@auth/prisma-adapter": "1.0.4",
     "@googlemaps/js-api-loader": "1.16.2",
     "@hookform/resolvers": "3.3.0",
