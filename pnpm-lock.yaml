@@ -132,8 +132,8 @@ dependencies:
     specifier: 2.0.2
     version: 2.0.2(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.18.0)(styled-components@5.3.11)
   stripe:
-    specifier: 13.11.0
-    version: 13.11.0
+    specifier: 14.1.0
+    version: 14.1.0
   suspend-react:
     specifier: 0.1.3
     version: 0.1.3(react@18.2.0)
@@ -7840,8 +7840,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /stripe@13.11.0:
-    resolution: {integrity: sha512-yPxVJxUzP1QHhHeFnYjJl48QwDS1+5befcL7ju7+t+i88D5r0rbsL+GkCCS6zgcU+TiV5bF9eMGcKyJfLf8BZQ==}
+  /stripe@14.1.0:
+    resolution: {integrity: sha512-hpI8OT7jbaVTGOm9bqeCbdVGwM/55Hetn+WpPGFSq7FmlnqLPB7CSZy2eNYU6ko+4tdur6ZMrDKS6wh1CCx8bw==}
     engines: {node: '>=12.*'}
     dependencies:
       '@types/node': 20.8.6
