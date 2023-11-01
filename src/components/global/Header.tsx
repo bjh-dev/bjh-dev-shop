@@ -30,7 +30,7 @@ function Header() {
             </div>
             <div>
               <CTAButton
-                url="https://calendly.com/bjhdev/intro-call"
+                url="https://app.reclaim.ai/m/bryanjhickey/intro-call"
                 text="Schedule a call"
               />
             </div>

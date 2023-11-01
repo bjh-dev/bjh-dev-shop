@@ -80,7 +80,7 @@ function Guide(props: GuideProps) {
             process and work over a call.
           </p>
           <CTAButton
-            url="https://calendly.com/bjhdev/intro-call"
+            url="https://app.reclaim.ai/m/bryanjhickey/intro-call"
             text="Schedule a call"
           />
         </div>

@@ -56,9 +56,9 @@ function Plan(props: PlanProps) {
               )
             })}
           </div>
-          <div className="mt-16">
+          <div className="my-16">
             <CTAButton
-              url="https://calendly.com/bjhdev/intro-call"
+              url="https://app.reclaim.ai/m/bryanjhickey/intro-call"
               text="Schedule a call today!"
             />
           </div>
