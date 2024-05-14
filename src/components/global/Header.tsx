@@ -2,42 +2,41 @@
 
 import Link from 'next/link'
 
-import AuthButton from '../ui/auth/AuthButton'
 import CTAButton from '../ui/CTAButton'
 import Logo from '../ui/Logo'
 
-function Header() {
-  return (
-    <div className="fixed w-full top-0 z-50 bg-gray-100 dark:bg-gray-700 shadow-md">
-      <div className="container py-4">
-        <div className="flex w-full items-center justify-between">
-          <div className="dark:hidden">
-            <Link href="/" className="w-16 h-auto block outline-blue-600">
-              <Logo color />
-            </Link>
-          </div>
-          <div className="hidden dark:block">
-            <Link href="/" className="w-16 h-auto block outline-blue-600">
-              <Logo white />
-            </Link>
-          </div>
-          <div className="flex space-x-4 items-center">
-            {/* <Link href="/church-websites/">Church&nbsp;Websites</Link>
-            <Link href="/services/">Services</Link>
-            <Link href="/posts/">Posts</Link> */}
-            <div>
-              <AuthButton />
+const Header = () => {
+    return (
+        <div className="fixed top-0 z-50 w-full bg-gray-100 shadow-md dark:bg-gray-700">
+            <div className="container py-4">
+                <div className="flex w-full items-center justify-between">
+                    <div className="dark:hidden">
+                        <Link
+                            href="/"
+                            className="block h-auto w-16 outline-blue-600"
+                        >
+                            <Logo color />
+                        </Link>
+                    </div>
+                    <div className="hidden dark:block">
+                        <Link
+                            href="/"
+                            className="block h-auto w-16 outline-blue-600"
+                        >
+                            <Logo white />
+                        </Link>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                        <div>
+                            <CTAButton
+                                url="https://app.reclaim.ai/m/bryanjhickey/intro-call"
+                                text="Schedule a call"
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-              <CTAButton
-                url="https://app.reclaim.ai/m/bryanjhickey/intro-call"
-                text="Schedule a call"
-              />
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  )
+    )
 }
 export default Header

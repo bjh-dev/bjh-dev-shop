@@ -7,19 +7,24 @@ import { pageBySlugQuery } from '@/lib/queries'
 import { PagePayload } from '@/lib/types/sanity'
 
 type PageProps = {
-  data: PagePayload
+    data: PagePayload
 }
 
-function HomePagePreview({ data: initialData }: PageProps) {
-  const [data] = useLiveQuery<PagePayload | null>(initialData, pageBySlugQuery)
-
-  if (!data) {
-    return (
-      <div>Please start editing your Home document to see the preview!</div>
+const HomePagePreview = ({ data: initialData }: PageProps) => {
+    const [data] = useLiveQuery<PagePayload | null>(
+        initialData,
+        pageBySlugQuery
     )
-  }
 
-  return <Page data={data} />
+    if (!data) {
+        return (
+            <div>
+                Please start editing your Home document to see the preview!
+            </div>
+        )
+    }
+
+    return <Page data={data} />
 }
 
 export default HomePagePreview

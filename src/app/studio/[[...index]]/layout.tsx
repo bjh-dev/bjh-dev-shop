@@ -2,10 +2,8 @@ import '@/app/globals.css'
 
 import React from 'react'
 
-export default function StudioLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return <div>{children}</div>
+const StudioLayout = ({ children }: { children: React.ReactNode }) => {
+    return <div>{children}</div>
 }
+
+export default StudioLayout
