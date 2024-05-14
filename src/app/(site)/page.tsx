@@ -13,69 +13,72 @@ import { urlForImage } from '@/sanity/lib/image'
 export const revalidate = 0
 
 export async function generateMetadata(): Promise<Metadata> {
-  const preview = draftMode().isEnabled
-    ? { token: readToken as string }
-    : undefined
-  const client = getClient(preview)
+    const preview = draftMode().isEnabled
+        ? { token: readToken as string }
+        : undefined
+    const client = getClient(preview)
 
-  const [settings, home] = await Promise.all([
-    client.fetch<SettingsPayload>(settingsQuery),
-    client.fetch<HomePagePayload>(homePageQuery),
-  ])
+    const [settings, home] = await Promise.all([
+        client.fetch<SettingsPayload>(settingsQuery),
+        client.fetch<HomePagePayload>(homePageQuery),
+    ])
 
-  const openGraphImages = home.seo.image
-    ? [
-        {
-          url: urlForImage(home.seo.image).width(800).height(600).url(),
-          width: 800,
-          height: 600,
-        },
-        {
-          // Facebook recommended size
-          url: urlForImage(home.seo.image).width(1200).height(630).url(),
-          width: 1200,
-          height: 630,
-        },
-        {
-          // Square 1:1
-          url: urlForImage(home.seo.image).width(600).height(600).url(),
-          width: 600,
-          height: 600,
-        },
-      ]
-    : []
+    const openGraphImages = home.seo.image
+        ? [
+              {
+                  url: urlForImage(home.seo.image).width(800).height(600).url(),
+                  width: 800,
+                  height: 600,
+              },
+              {
+                  // Facebook recommended size
+                  url: urlForImage(home.seo.image)
+                      .width(1200)
+                      .height(630)
+                      .url(),
+                  width: 1200,
+                  height: 630,
+              },
+              {
+                  // Square 1:1
+                  url: urlForImage(home.seo.image).width(600).height(600).url(),
+                  width: 600,
+                  height: 600,
+              },
+          ]
+        : []
 
-  return {
-    title: home.seo.title || home.title || '',
-    description: home.seo.description || '',
-    openGraph: {
-      title: home.seo.title || home.title || '',
-      description: home.seo.description || '',
-      url:
-        process.env.NODE_ENV === 'production'
-          ? `${settings?.siteUrl}`
-          : `http://localhost:3000/`,
-      siteName: settings.title || '',
-      images: openGraphImages || [],
-      locale: 'en-AU',
-      type: 'website',
-    },
-  }
+    return {
+        title: home.seo.title || home.title || '',
+        description: home.seo.description || '',
+        openGraph: {
+            title: home.seo.title || home.title || '',
+            description: home.seo.description || '',
+            url:
+                process.env.NODE_ENV === 'production'
+                    ? `${settings?.siteUrl}`
+                    : `http://localhost:3000/`,
+            siteName: settings.title || '',
+            images: openGraphImages || [],
+            locale: 'en-AU',
+            type: 'website',
+        },
+    }
 }
 const HomeIndexRoute = async () => {
-  const preview = draftMode().isEnabled
-    ? { token: readToken as string }
-    : undefined
-  const client = getClient(preview)
-  const [home] = await Promise.all([
-    client.fetch<HomePagePayload>(homePageQuery),
-  ])
+    const preview = draftMode().isEnabled
+        ? { token: readToken as string }
+        : undefined
+    const client = getClient(preview)
+    const [home] = await Promise.all([
+        client.fetch<HomePagePayload>(homePageQuery),
+    ])
 
-  if (!home && !preview) {
-    notFound()
-  }
+    if (!home && !preview) {
+        notFound()
+    }
 
-  return preview ? <HomePagePreview data={home} /> : <HomePage data={home} />
+    return preview ? <HomePagePreview data={home} /> : <HomePage data={home} />
 }
 
 export default HomeIndexRoute

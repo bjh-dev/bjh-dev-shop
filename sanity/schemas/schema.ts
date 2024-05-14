@@ -21,33 +21,33 @@ import plan from './sections/plan'
 import steps from './sections/steps'
 
 export const PREVIEWABLE_DOCUMENT_TYPES: string[] = [
-  home.name,
-  page.name,
-  post.name,
+    home.name,
+    page.name,
+    post.name,
 ]
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [
-    // documents
-    home,
-    page,
-    post,
-    product,
-    settings,
-    // objects
-    address,
-    cta,
-    imageSimple,
-    link,
-    media,
-    portableTextSimple,
-    seo,
-    video,
-    // sections
-    features,
-    guide,
-    hero,
-    plan,
-    steps,
-  ],
+    types: [
+        // documents
+        home,
+        page,
+        post,
+        product,
+        settings,
+        // objects
+        address,
+        cta,
+        imageSimple,
+        link,
+        media,
+        portableTextSimple,
+        seo,
+        video,
+        // sections
+        features,
+        guide,
+        hero,
+        plan,
+        steps,
+    ],
 }

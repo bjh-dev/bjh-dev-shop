@@ -1,20 +1,20 @@
 type ColourSectionProps = {
-  text: string
+    text: string
 }
 
-function ColourSection(props: ColourSectionProps) {
-  const { text } = props
-  return (
-    <div className="bg-rose-600 py-24 text-gray-50 shadow-inner">
-      <div className="container">
-        <div className="mx-auto max-w-prose">
-          <h3 className="text-center font-plantin text-xl font-medium lg:text-3xl">
-            {text}
-          </h3>
+const ColourSection = (props: Readonly<ColourSectionProps>) => {
+    const { text } = props
+    return (
+        <div className="bg-rose-600 py-12 text-gray-50 shadow-inner md:py-24">
+            <div className="container">
+                <div className="mx-auto max-w-prose">
+                    <h3 className="text-center font-plantin text-xl font-medium lg:text-3xl">
+                        {text}
+                    </h3>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  )
+    )
 }
 
 export default ColourSection

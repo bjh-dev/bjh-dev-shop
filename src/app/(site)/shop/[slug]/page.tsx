@@ -12,24 +12,24 @@ import { getClient } from '@/sanity/lib/client'
 export const revalidate = 0
 
 const ProductPageRoute = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params
-  const preview = draftMode().isEnabled
-    ? { token: readToken as string }
-    : undefined
-  const client = getClient(preview)
-  const [data] = await Promise.all([
-    client.fetch<ProductPayload>(productBySlugQuery, { slug }),
-  ])
+    const { slug } = params
+    const preview = draftMode().isEnabled
+        ? { token: readToken as string }
+        : undefined
+    const client = getClient(preview)
+    const [data] = await Promise.all([
+        client.fetch<ProductPayload>(productBySlugQuery, { slug }),
+    ])
 
-  if (!data && !preview) {
-    notFound()
-  }
+    if (!data && !preview) {
+        notFound()
+    }
 
-  return preview ? (
-    <ProductPagePreview data={data} />
-  ) : (
-    <ProductPage data={data} />
-  )
+    return preview ? (
+        <ProductPagePreview data={data} />
+    ) : (
+        <ProductPage data={data} />
+    )
 }
 
 export default ProductPageRoute
