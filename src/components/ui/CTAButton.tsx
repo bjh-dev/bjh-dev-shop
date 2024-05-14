@@ -9,7 +9,7 @@ interface CTAButtonProps {
     reference?: any
     url?: string
     text?: string
-    size?: 'default' | 'sm' | 'lg' | 'icon' | null | undefined
+    size?: 'default' | 'sm' | 'lg' | 'icon'
     variant?:
         | 'default'
         | 'destructive'
@@ -17,8 +17,6 @@ interface CTAButtonProps {
         | 'secondary'
         | 'ghost'
         | 'link'
-        | null
-        | undefined
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -34,7 +32,7 @@ const CTAButton = (props: CTAButtonProps) => {
         return (
             <Button size={size} variant={variant} asChild>
                 <a href={url} target="_blank" rel="noopener noreferrer">
-                    {text || 'Schedule a call'}
+                    {text ?? 'Schedule a call'}
                 </a>
             </Button>
         )

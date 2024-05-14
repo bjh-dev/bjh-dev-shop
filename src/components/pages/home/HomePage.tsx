@@ -17,7 +17,7 @@ const HomePage = ({ data }: HomePageProps) => {
     return (
         <>
             {data?.pageBuilder.map(s => {
-                let el = null
+                let el
                 switch (s._type) {
                     case 'hero':
                         el = <HeroFullImage key={s._key} {...s} />
