@@ -22,7 +22,7 @@ type GuideProps = {
     metrics: Metric[]
 }
 
-const Guide = (props: Readonly<GuideProps>) => {
+const Guide = (props: GuideProps) => {
     const { title, subtitle, image, description, metrics } = props
     return (
         <div className="relative bg-gray-200 py-12 dark:bg-gray-800 md:py-24">
@@ -82,7 +82,7 @@ const Guide = (props: Readonly<GuideProps>) => {
                         you about our process and work over a call.
                     </p>
                     <CTAButton
-                        url="https://app.reclaim.ai/m/bryanjhickey/intro-call"
+                        url="https://calendar.app.google/zhTWfyn9ebyruuMk7"
                         text="Schedule a call"
                     />
                 </div>

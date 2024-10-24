@@ -29,7 +29,7 @@ const Header = () => {
                     <div className="flex items-center space-x-4">
                         <div>
                             <CTAButton
-                                url="https://app.reclaim.ai/m/bryanjhickey/intro-call"
+                                url="https://calendar.app.google/zhTWfyn9ebyruuMk7"
                                 text="Schedule a call"
                             />
                         </div>

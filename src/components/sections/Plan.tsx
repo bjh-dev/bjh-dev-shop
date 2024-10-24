@@ -16,7 +16,7 @@ interface PlanProps {
     planSteps: Step[]
 }
 
-const Plan = (props: Readonly<PlanProps>) => {
+const Plan = (props: PlanProps) => {
     const { title, description, planSteps } = props
     return (
         <div className="py-12 md:py-24">
@@ -61,7 +61,7 @@ const Plan = (props: Readonly<PlanProps>) => {
                     </div>
                     <div className="my-16">
                         <CTAButton
-                            url="https://app.reclaim.ai/m/bryanjhickey/intro-call"
+                            url="https://calendar.app.google/zhTWfyn9ebyruuMk7"
                             text="Schedule a call today!"
                         />
                     </div>
