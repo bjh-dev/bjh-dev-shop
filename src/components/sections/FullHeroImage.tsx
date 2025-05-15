@@ -83,16 +83,17 @@ const HeroFullImage = (props: Hero) => {
                         >
                             <div className="mx-auto">
                                 <div className="flex flex-row justify-center space-x-6">
-                                    {ctas.map(c => (
+                                    Booked Through 2025
+{/*                                     {ctas.map(c => (
                                         <CTAButton
                                             variant="default"
                                             size="lg"
                                             key={c._key}
                                             {...c}
                                         />
-                                    ))}
+                                    ))} */}
                                 </div>
-                                <p className="mt-6 text-xs">
+{/*                                 <p className="mt-6 text-xs">
                                     All calls are{' '}
                                     <span className="underline underline-offset-2">
                                         confidential
@@ -102,7 +103,7 @@ const HeroFullImage = (props: Hero) => {
                                         obligation free
                                     </span>
                                     .
-                                </p>
+                                </p> */}
                             </div>
                         </Animation>
                     </div>
