@@ -2,7 +2,7 @@ import { PortableTextBlock } from 'sanity'
 
 import CustomPortableText from '@/components/ui/CustomPortableText'
 
-import CTAButton from '../ui/CTAButton'
+// import CTAButton from '../ui/CTAButton'
 
 interface Step {
     _key: string
