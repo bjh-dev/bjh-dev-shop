@@ -36,10 +36,11 @@ const Hero = (props: any) => {
                                 slideInBottom
                             >
                                 <div className="flex space-x-6 pt-12">
+                                    Booked Through 2025
                                     {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                                    {ctas.map((c: any) => (
+{/*                                     {ctas.map((c: any) => (
                                         <CTAButton key={c._key} {...c} />
-                                    ))}
+                                    ))} */}
                                 </div>
                             </Animation>
                         </div>
