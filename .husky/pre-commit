@@ -3,12 +3,12 @@
 
 echo '🏗️👷 Styling, testing and building your project before committing'
 
-npx lint-staged
+bun run lint-staged
 
 # If everything passes... Now we can commit
 echo 'Code looks good to me... Trying to build now. 🤔🤔🤔🤔'
 
-pnpm turbo build lint ||
+bun run build ||
 (
     echo 'Better call Bob... Because your build failed ❌👷🔨❌
             Next build failed: View the errors above to see why.

@@ -1,12 +1,11 @@
 import Animation from '../ui/Animation'
 import BodyPortableText from '../ui/BodyPortableText'
-// import CTAButton from '../ui/CTAButton'
 import HeaderPortableText from '../ui/HeaderPortableText'
 import Media from '../ui/Media'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Hero = (props: any) => {
-    const { title, subtitle, media, ctas = [] } = props
+    const { title, subtitle, media } = props
 
     return (
         <section className="py-xl relative bg-gray-200">
@@ -38,7 +37,7 @@ const Hero = (props: any) => {
                                 <div className="flex space-x-6 pt-12">
                                     Booked Through 2025
                                     {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-{/*                                     {ctas.map((c: any) => (
+                                    {/*                                     {ctas.map((c: any) => (
                                         <CTAButton key={c._key} {...c} />
                                     ))} */}
                                 </div>

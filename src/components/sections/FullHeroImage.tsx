@@ -8,7 +8,7 @@ import BodyPortableText from '../ui/BodyPortableText'
 // import CTAButton from '../ui/CTAButton'
 
 const HeroFullImage = (props: Hero) => {
-    const { subtitle, media, ctas = [] } = props
+    const { subtitle, media } = props
     return (
         <div className="hero-full-image">
             <div className="relative isolate h-[100vh] overflow-hidden py-14 sm:h-[80vh] xl:h-[70vh]">
@@ -84,26 +84,7 @@ const HeroFullImage = (props: Hero) => {
                             <div className="mx-auto">
                                 <div className="flex flex-row justify-center space-x-6">
                                     Booked Through 2025
-{/*                                     {ctas.map(c => (
-                                        <CTAButton
-                                            variant="default"
-                                            size="lg"
-                                            key={c._key}
-                                            {...c}
-                                        />
-                                    ))} */}
                                 </div>
-{/*                                 <p className="mt-6 text-xs">
-                                    All calls are{' '}
-                                    <span className="underline underline-offset-2">
-                                        confidential
-                                    </span>{' '}
-                                    and{' '}
-                                    <span className="underline underline-offset-2">
-                                        obligation free
-                                    </span>
-                                    .
-                                </p> */}
                             </div>
                         </Animation>
                     </div>
