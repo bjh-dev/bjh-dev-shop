@@ -60,10 +60,11 @@ const Plan = (props: PlanProps) => {
                         })}
                     </div>
                     <div className="my-16">
-                        <CTAButton
+                        Booked Through 2025
+{/*                         <CTAButton
                             url="https://calendar.app.google/zhTWfyn9ebyruuMk7"
                             text="Schedule a call today!"
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>
