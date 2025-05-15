@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-import CTAButton from '../ui/CTAButton'
+// import CTAButton from '../ui/CTAButton'
 import Logo from '../ui/Logo'
 
 const Header = () => {
