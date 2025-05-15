@@ -5,7 +5,7 @@ import { urlForImage } from '@/sanity/lib/image'
 
 import Animation from '../ui/Animation'
 import BodyPortableText from '../ui/BodyPortableText'
-import CTAButton from '../ui/CTAButton'
+// import CTAButton from '../ui/CTAButton'
 
 const HeroFullImage = (props: Hero) => {
     const { subtitle, media, ctas = [] } = props
