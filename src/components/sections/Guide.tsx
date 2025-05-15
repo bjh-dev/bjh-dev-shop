@@ -81,10 +81,11 @@ const Guide = (props: GuideProps) => {
                         are celebrated in public. We&apos;re happy to talk with
                         you about our process and work over a call.
                     </p>
-                    <CTAButton
+                    <div>Booked Through 2025</div>
+{/*                     <CTAButton
                         url="https://calendar.app.google/zhTWfyn9ebyruuMk7"
                         text="Schedule a call"
-                    />
+                    /> */}
                 </div>
             </div>
         </div>
