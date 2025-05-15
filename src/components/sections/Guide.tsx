@@ -5,7 +5,7 @@ import CustomPortableText from '@/components/ui/CustomPortableText'
 import { SimpleImageType } from '@/lib/types/sanity'
 import { urlForImage } from '@/sanity/lib/image'
 
-import CTAButton from '../ui/CTAButton'
+// import CTAButton from '../ui/CTAButton'
 
 interface Metric {
     _key: string
