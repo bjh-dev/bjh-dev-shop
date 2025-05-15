@@ -27,12 +27,7 @@ const Header = () => {
                         </Link>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <div>
-                            <CTAButton
-                                url="https://calendar.app.google/zhTWfyn9ebyruuMk7"
-                                text="Schedule a call"
-                            />
-                        </div>
+                        Booked Through 2025
                     </div>
                 </div>
             </div>
