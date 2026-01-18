@@ -4,11 +4,11 @@ const nextConfig = {
         removeConsole: process.env.NODE_ENV === 'production',
     },
     images: {
-        domains: [
-            'cdn.sanity.io',
-            'images.unsplash.com',
-            'avatars.githubusercontent.com',
-            'lh3.googleusercontent.com',
+        remotePatterns: [
+            { hostname: 'cdn.sanity.io', protocol: 'https' },
+            { hostname: 'images.unsplash.com', protocol: 'https' },
+            { hostname: 'avatars.githubusercontent.com', protocol: 'https' },
+            { hostname: 'lh3.googleusercontent.com', protocol: 'https' },
         ],
     },
 }

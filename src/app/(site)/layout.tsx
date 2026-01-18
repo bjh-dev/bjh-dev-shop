@@ -3,9 +3,7 @@ import type { Viewport } from 'next'
 import { Metadata } from 'next'
 import React from 'react'
 
-import Footer from '@/components/global/Footer'
-import Header from '@/components/global/Header'
-import DevlayoutHelper from '@/components/ui/DevLayoutHelper'
+import Closing from '@/components/global/Closing'
 
 export const metadata: Metadata = {
     generator: 'Next.js',
@@ -38,21 +36,17 @@ export const viewport: Viewport = {
     colorScheme: 'dark',
 }
 
-const PagesLayout = async ({
-    children,
-}: {
-    readonly children: React.ReactNode
-}) => {
+const PagesLayout = async () => {
     return (
         <div className="relative" suppressHydrationWarning>
-            <div className="flex min-h-screen flex-col bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-50">
+            <Closing />
+            {/* <div className="flex min-h-screen flex-col bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-50">
                 <Header />
                 <main className="mb-auto mt-16">{children}</main>
                 <Footer />
-            </div>
+            </div> */}
 
             <Analytics />
-            {process.env.NODE_ENV === 'development' && <DevlayoutHelper />}
         </div>
     )
 }
