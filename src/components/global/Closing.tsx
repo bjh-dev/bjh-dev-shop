@@ -3,6 +3,7 @@ import React from 'react'
 import Logo from '@/components/ui/Logo'
 
 const socialLinks = [
+    { href: 'https://www.facebook.com/bryanjhickey', label: 'Facebook' },
     { href: 'https://instagram.com/bryanjhickey', label: 'Instagram' },
     { href: 'https://twitter.com/bryanjhickey', label: 'X (Twitter)' },
     { href: 'https://www.linkedin.com/in/bryanjhickey/', label: 'LinkedIn' },
