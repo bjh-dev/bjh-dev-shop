@@ -9,7 +9,7 @@ const socialLinks = [
 ]
 
 const Closing = () => (
-    <section className="flex h-svh flex-col justify-center bg-slate-50 py-20 text-slate-900 dark:bg-slate-900 dark:text-slate-100">
+    <section className="flex min-h-svh flex-col justify-center bg-slate-50 py-20 text-slate-900 dark:bg-slate-900 dark:text-slate-100">
         <div className="container mx-auto max-w-3xl space-y-6 px-6 text-center">
             <div className="mx-auto w-32 py-6">
                 <Logo />
