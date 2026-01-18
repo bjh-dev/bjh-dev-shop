@@ -5,7 +5,7 @@ import Logo from '@/components/ui/Logo'
 const socialLinks = [
     { href: 'https://instagram.com/bryanjhickey', label: 'Instagram' },
     { href: 'https://twitter.com/bryanjhickey', label: 'X (Twitter)' },
-    { href: 'https://www.linkedin.com/in/bryanhickey', label: 'LinkedIn' },
+    { href: 'https://www.linkedin.com/in/bryanjhickey/', label: 'LinkedIn' },
 ]
 
 const Closing = () => (
