@@ -30,7 +30,7 @@ const Closing = () => (
                 sharing new work and ideas at{' '}
                 <a
                     className="font-semibold underline decoration-2 underline-offset-4 hover:text-rose-600"
-                    href="https://www.bryanhickey.com"
+                    href="https://www.bryanjhickey.com"
                     rel="noreferrer noopener"
                     target="_blank"
                 >
